@@ -1,4 +1,5 @@
 #summary Usage manual for the EZGone API.
+#labels Phase-Implementation,Featured
 = How to use EZGone =
 
 This brief manual will explain how to use the EZGone class. Before we get started, make sure you have access to the following:
@@ -50,4 +51,17 @@ $language->set_value("en_US"); // The page will be displayed in English
 $currency->set_value("EUR"); // The chosen currency will be Euro
 }}}
 
-The API now knows which parameters to send and which values will be assigned to these parameters. The only thing that's left is to tell the API to  
+The API now knows which parameters to send and which values will be assigned to these parameters. The only thing that's left is to tell the API to hash the parameters and to generate the HTML form that will enable the card holder to be redirected to the Ogone servers. The only thing you need to do is:
+
+{{{
+generate_prod_payment($display, $secretkey);
+}}}
+or
+{{{
+generate_test_payment($display, $secretkey);
+}}}
+depending on the environment you wish to enable (test or production).
+
+You may notice the $display and $secretkey parameters. These are mandatory and will tell the plugin which text to display on the payment button ($display) and what secret key to use in order to hash the parameters (see Setting up the Ogone Account). 
+
+Once you've done this, the API will generate a simple button that will be displayed wherever you've inserted the "generate" function. 
