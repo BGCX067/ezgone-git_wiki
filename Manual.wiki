@@ -65,3 +65,16 @@ depending on the environment you wish to enable (test or production).
 You may notice the $display and $secretkey parameters. These are mandatory and will tell the plugin which text to display on the payment button ($display) and what secret key to use in order to hash the parameters (see Setting up the Ogone Account). 
 
 Once you've done this, the API will generate a simple button that will be displayed wherever you've inserted the "generate" function. 
+
+= References =
+
+In order to get the most out of your installation, you might consider to take a look at the following documentation:
+
+  * The [https://secure.ogone.com/ncol/param_cookbook.asp Ogone parameter Cookbook]: a complete list of parameters that can be sent to Ogone 
+  * The [https://secure.ogone.com/ncol/Ogone_e-Com-BAS_EN.pdf Basic Ogone integration manual]
+
+= Important notes =
+
+Never assign values directly to the $ezgone_methods var as it might keep the API from functioning correctly. 
+
+Using the API doesn't guarantee the safety of your online payments. Always configure your fraud prevention module as good as possible and consider using a HTTPS connection instead of plain HTTP. 
