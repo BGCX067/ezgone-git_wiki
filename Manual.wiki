@@ -3,9 +3,9 @@
 
 This brief manual will explain how to use the EZGone class.
 
-<wiki:toc/>
-
 = Integration Process =
+
+<wiki:toc/>
 
 == Getting Started ==
 
