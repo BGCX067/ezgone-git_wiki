@@ -1,8 +1,15 @@
 #summary Usage manual for the EZGone API.
 #labels Phase-Implementation,Featured
-= How to use EZGone =
 
-This brief manual will explain how to use the EZGone class. Before we get started, make sure you have access to the following:
+This brief manual will explain how to use the EZGone class.
+
+<wiki:toc/>
+
+= Integration Process =
+
+== Getting Started ==
+
+Before we get started, make sure you have access to the following:
 
   # An Ogone account (either test or production)
   # Basic knowledge of PHP
