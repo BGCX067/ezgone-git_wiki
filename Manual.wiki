@@ -15,3 +15,39 @@ Before you do anything with the plugin itself, you need to make sure the Ogone a
 Under "Data and origin verification", fill in a secret key you have chosen yourself. This key will be used to hash the parameters so they cannot be tampered. Now click "Confirm" to save the changes.
 
 There isn't actually any more configuration to do in order to use the basic functionality of the EZGone API. Of, course, you can customize the Ogone account to its full extent, but for this I'd recommend to take a look at the [https://secure.ogone.com/ncol/Ogone_e-Com-BAS_EN.pdf Ogone integration manual].
+
+== Setting up EZGone == 
+
+Place the ezgone-libs.php file on your web server. That's it.
+
+== Calling the API ==
+
+In order to generate the link to the Ogone payment page, you'll first need to include the EZGone file in your PHP code. The best thing to do is to put the code below as early as possible in your PHP script:
+
+{{{
+require 'path to the EZGone file/ezgone-libs.php';
+}}}
+
+Of course, the "path to the EZGone file" needs to be replaced with the exact location of the EZGone file.
+
+Now it's time to create the parameters and assign a value to each one of them. In this example I'll just call the basic parameters (being the PSPID, the order reference, the total amount of the transaction, the languae of the payment page and the currency):
+
+{{{
+$pspid = new PayParam("pspid");
+$orderid= new PayParam("orderid");
+$amount= new PayParam("amount");
+$language= new PayParam("language");
+$currency = new PayParam("currency");
+}}}
+
+Basically what happened is that I've told the API that I'd like to send over these parameters to the Ogone server so they can be used in the payment process. Now we simply need to assign a value to each one of them:
+
+{{{
+$pspid->set_value("YourOgoneUsername");
+$amount->set_value("5000"); // The total amount multiplied by 100
+$orderid->set_value("order1288834");
+$language->set_value("en_US"); // The page will be displayed in English
+$currency->set_value("EUR"); // The chosen currency will be Euro
+}}}
+
+The API now knows which parameters to send and which values will be assigned to these parameters. The only thing that's left is to tell the API to  
