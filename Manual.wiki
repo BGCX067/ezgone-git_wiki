@@ -1,0 +1,17 @@
+#summary Usage manual for the EZGone API.
+= How to use EZGone =
+
+This brief manual will explain how to use the EZGone class. Before we get started, make sure you have access to the following:
+
+  # An Ogone account (either test or production)
+  # Basic knowledge of PHP
+  # A server running PHP 5 or higher
+  # 5 minutes
+
+== Setting up the Ogone account ==
+
+Before you do anything with the plugin itself, you need to make sure the Ogone account will actually accept the incoming requests. To do so, log-in on your Ogone account and head over to the "Technical Information" page. 
+
+Under "Data and origin verification", fill in a secret key you have chosen yourself. This key will be used to hash the parameters so they cannot be tampered. Now click "Confirm" to save the changes.
+
+There isn't actually any more configuration to do in order to use the basic functionality of the EZGone API. Of, course, you can customize the Ogone account to its full extent, but for this I'd recommend to take a look at the [https://secure.ogone.com/ncol/Ogone_e-Com-BAS_EN.pdf Ogone integration manual].
