@@ -80,6 +80,21 @@ In order to get the most out of your installation, you might consider to take a 
   * The [https://secure.ogone.com/ncol/param_cookbook.asp Ogone parameter Cookbook]: a complete list of parameters that can be sent to Ogone 
   * The [https://secure.ogone.com/ncol/Ogone_e-Com-BAS_EN.pdf Basic Ogone integration manual]
 
+= UTF-8 Support (optional) =
+
+If you want to use UTF-8 encoding for enhanced character support, you can actually call the Generate payment functions with an additional argument:
+
+{{{
+generate_prod_payment($display, $secretkey, $encoding);
+}}}
+or
+{{{
+generate_test_payment($display, $secretkey, $encoding);
+}}}
+depending on the environment you wish to enable (test or production).
+
+If you assing the value "UTF" to the encoding argument, it will call the special UTF-8 payment page. Leaving the argument blank or assigning ISO to it will call the standard payment page.
+
 = Important notes =
 
 Never assign values directly to the $ezgone_methods var as it might keep the API from functioning correctly. 
