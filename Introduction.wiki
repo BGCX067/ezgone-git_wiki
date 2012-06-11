@@ -1,5 +1,5 @@
 #summary Introduction to the EZGone PHP API.
-#labels Featured
+#labels Deprecated
 
 = Introduction =
 
