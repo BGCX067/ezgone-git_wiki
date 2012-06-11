@@ -1,0 +1,27 @@
+#summary This page is to be used to suggest new features for EZGone
+#labels Featured,Phase-Design
+
+This page summarizes the new features that will be added to the EZGone PHP wrapper. You may also use this page to sugegst new features. Please read through the agenda before suggesting any new features.
+
+=New features on the agenda=
+
+==Short term implementation==
+
+  * Mobile support
+  * Postsale feedback management
+  * 
+
+==On the planning==
+
+  * Support for Alias gateway (one page checkout)
+  * Easy templating options
+  * Easy creation of PDF files with a payment link in it
+
+= Recently added = 
+
+  * Support for UTF-8 payment page
+  * Automatic filtering of empty values
+
+= Suggest new features =
+
+Leave a comment below to suggest new features for the EZGone wrapper. Please note that suggesting new features for Ogone should be done towards Ogone itself since this open-source project stands loose from the developments within Ogone.
